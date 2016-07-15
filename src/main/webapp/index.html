@@ -7,6 +7,7 @@
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controller/GreetController.js"></script>
+        <script src="scripts/directive/alert.js"></script>
         <script src="scripts/service/greetService.js"></script>
     </head>
     <body>
@@ -19,6 +20,7 @@
 
                         <br />
 
+                        <alert alerts="alerts"></alert>
                         <form ng-submit="submit()">
                             <div class="form-group">
                                 <label for="email">New message of the day:</label>
