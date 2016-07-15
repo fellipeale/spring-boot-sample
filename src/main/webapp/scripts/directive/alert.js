@@ -4,7 +4,8 @@
         .directive('alert', alert);
 
     function alert() {
-        const FADE_TIME = 5000; 
+        const DELAY_TIME = 3000;
+        const FADE_TIME = 1000; 
 
         return {
             templateUrl: 'scripts/directive/alert.html',
@@ -13,7 +14,12 @@
                 alerts: '='
             },
             link(scope, element) {
-                scope.$watchCollection('alerts', (newValue, oldValue) => {
+                scope.$watchCollection('alerts', () => {
+                    $(element)
+                        .find('.alert:visible')
+                        .each((index, child) => {
+                            $(child).delay(DELAY_TIME).fadeOut(FADE_TIME);
+                        });
                 });
             }
         }
