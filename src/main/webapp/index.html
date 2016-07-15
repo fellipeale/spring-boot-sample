@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controller/GreetController.js"></script>
+        <script src="scripts/service/greetService.js"></script>
+    </head>
+    <body>
+        <div ng-app="greet">
+            <div ng-controller="GreetController">
+                <div class="container">
+                    <div class="jumbotron text-center">
+                        <h1>Message of the day!</h1>
+                        <p>{{greet.message}}</p>
+
+                        <br />
+
+                        <form ng-submit="submit()">
+                            <div class="form-group">
+                                <label for="email">New message of the day:</label>
+                                <input type="text" class="form-control" ng-model="newGreet.message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

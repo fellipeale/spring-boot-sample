@@ -1,0 +1,19 @@
+{
+  "name": "spring-boot-sample",
+  "version": "1.0.0",
+  "description": "Scaffold of a Maven project with spring-boot. Included BOWER configuration for AngularJS and Bootstrap. Just run the following command on the base folder of the application.",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "start": "http-server src/main/webapp -p 3000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellipeale/spring-boot-sample.git"
+  },
+  "license": "MIT"
+}
